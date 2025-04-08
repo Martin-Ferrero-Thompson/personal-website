@@ -1,0 +1,127 @@
+/* css/style.css */
+
+/* ===================================
+   Table of Contents
+   ===================================
+   1. Global Styles & Typography
+   2. Component Adjustments
+      - Transitions
+      - Theme Switcher
+   3. Section Specific Styles
+      - Hero Section (#home)
+      - Other Sections (Examples)
+   =================================== */
+
+
+/* 1. Global Styles & Typography */
+/* =================================== */
+
+body {
+  font-family: 'Inter', sans-serif; /* Use Inter, fallback to generic sans-serif */
+  -webkit-font-smoothing: antialiased; /* Improves font rendering on WebKit browsers */
+  -moz-osx-font-smoothing: grayscale; /* Improves font rendering on Firefox/macOS */
+
+  /* Smooth transition for color theme changes */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Optional: Fine-tune heading weights if needed. Bootstrap defaults (using fw-bold etc.) work well with variable fonts. */
+/*
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+*/
+
+
+/* 2. Component Adjustments */
+/* =================================== */
+
+/* General Transitions */
+.navbar, footer, section {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme Switcher Icon Alignment */
+#bd-theme i {
+    vertical-align: -.125em; /* Align icons better with text */
+}
+.dropdown-item i.bi {
+    vertical-align: -.125em;
+    width: 1em; /* Ensure consistent icon sizing */
+    height: 1em;
+}
+.dropdown-item .bi-check2 {
+    width: 1em;
+    height: 1em;
+}
+
+
+/* 3. Section Specific Styles */
+/* =================================== */
+
+/* Hero Section (#home) Custom Background */
+#home {
+  /* --- Background Image Implementation --- */
+  background-image: url('../assets/hero-background.png'); /* Path relative to CSS file */
+  background-size: cover;         /* Scale image to cover the section */
+  background-position: center center; /* Center the image */
+  background-repeat: no-repeat;   /* Do not tile the image */
+  /* --- End Background Image --- */
+
+  /* Remove the general color rule from here, apply it more specifically below */
+  /* color: #ffffff; */
+
+  /* Keep Flexbox alignment & min-height from HTML classes */
+}
+
+/* ---- ADD THIS BLOCK ---- */
+/* Ensure text elements within #home are white */
+#home h1,
+#home p {
+    color: #ffffff; /* Explicitly set h1 and p text color to white */
+}
+
+/* ---- END ADDED BLOCK ---- */
+/* Button Overrides for Hero (Optional - Uncomment/Adjust as needed) */
+/* The default btn-primary should look good. */
+/* The default btn-secondary might blend in; making it outlined could be better: */
+/*
+#home .btn-secondary {
+    background-color: transparent;
+    border-color: #ffffff;
+    color: #ffffff;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; // Add transition for hover
+}
+
+#home .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1); // Subtle background on hover
+    color: #ffffff; // Ensure text color remains white on hover
+}
+
+#home .btn-primary {
+   // Example: Make primary button slightly different if needed
+   // background-color: #your_custom_color;
+   // border-color: #your_custom_color;
+}
+
+#home .btn-primary:hover {
+    // Adjust hover if you changed the base style
+}
+*/
+
+/* Other Section Examples (Keep or remove) */
+/*
+#about .img-fluid {
+  border: 3px solid var(--bs-primary); // Example: Add a border to the profile picture
+}
+
+#projects .card {
+   border: none; // Example: Remove card borders for a flatter look
+   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; // Added box-shadow transition
+}
+
+#projects .card:hover {
+    transform: translateY(-5px); // Example: Add hover effect to cards
+    box-shadow: var(--bs-box-shadow-lg) !important; // Example: Increase shadow on hover (use !important sparingly if needed to override Bootstrap)
+}
+*/

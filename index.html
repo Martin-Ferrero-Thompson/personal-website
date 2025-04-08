@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<!-- Add data-bs-theme="auto" to enable auto mode detection -->
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons (Needed for the switcher) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="70">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="#home">MFT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+                    <!-- Color Mode Switcher Dropdown -->
+                    <li class="nav-item dropdown ms-lg-2">
+                        <button class="btn nav-link dropdown-toggle" id="bd-theme" type="button" aria-expanded="false"
+                            data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+                            <i class="bi bi-circle-half theme-icon-active" width="1em" height="1em"></i>
+                            <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                            <li>
+                                <button type="button" class="dropdown-item d-flex align-items-center"
+                                    data-bs-theme-value="light" aria-pressed="false">
+                                    <i class="bi bi-sun-fill me-2 opacity-50 theme-icon" width="1em" height="1em"></i>
+                                    Light
+                                    <i class="bi bi-check2 ms-auto d-none" width="1em" height="1em"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="dropdown-item d-flex align-items-center"
+                                    data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="bi bi-moon-stars-fill me-2 opacity-50 theme-icon" width="1em"
+                                        height="1em"></i>
+                                    Dark
+                                    <i class="bi bi-check2 ms-auto d-none" width="1em" height="1em"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="dropdown-item d-flex align-items-center active"
+                                    data-bs-theme-value="auto" aria-pressed="true">
+                                    <i class="bi bi-circle-half me-2 opacity-50 theme-icon" width="1em"
+                                        height="1em"></i>
+                                    Auto
+                                    <i class="bi bi-check2 ms-auto d-none" width="1em" height="1em"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- End Color Mode Switcher -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section -->
+        <!-- Using CSS variables now for background/text colors -->
+        <section id="home"
+            class="d-flex align-items-center justify-content-center min-vh-100 text-center text-body bg-body-tertiary">
+            <!-- Changed bg-dark to bg-body-tertiary, text-white to text-body -->
+            <div class="container">
+                <h1 class="display-3 fw-bold">Martin Ferrero-Thompson</h1>
+                <!-- First line: Title -->
+                <p class="lead fs-3 text-white mb-2">
+                    Full-Stack Developer and Vibe Coder
+                </p>
+
+                <!-- Second line: Tagline -->
+                <p class="fs-5 text-white mb-4"> 
+                    I design and code beautifully simple things, and I love what I do.
+                </p>
+                <!-- Buttons will adapt based on theme -->
+                <a href="#projects" class="btn btn-primary btn-lg me-2">View My Work</a>
+                <a href="#contact" class="btn btn-secondary btn-lg">Contact Me</a>
+                <!-- Changed btn-outline-light to btn-secondary -->
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-5">
+            <div class="container">
+                <h2 class="border-bottom pb-3 mb-4">About Me</h2>
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center mb-4 mb-md-0">
+                        <!-- Profile Picture -->
+                        <img src="assets/profile-picture.jpg" alt="A photo of [Your Name]"
+                            class="img-fluid rounded-circle shadow-sm" style="max-width: 250px;">
+                        <!-- Replace profile-picture.jpg and alt text -->
+                        <!-- Use a placeholder if you don't have one yet: https://via.placeholder.com/250 -->
+                    </div>
+                    <div class="col-md-8">
+                        <!-- About Me Text -->
+                        <p class="lead mb-4">
+                            Hi, I'm [Your Name]! I'm a passionate Full-Stack Developer based in [Your Location/Region].
+                            I specialize in building modern, responsive, and user-friendly web applications.
+                        </p>
+                        <p>
+                            My journey into web development started back in [Year/Context, e.g., university, self-study
+                            period]. I quickly fell in love with the blend of creativity and problem-solving involved in
+                            bringing ideas to life on the web. I thrive on learning new technologies and continuously
+                            improving my skills. I have experience with front-end frameworks like [Mention a framework,
+                            e.g., React, Vue, Angular] and back-end technologies such as [Mention backend tech, e.g.,
+                            Node.js, Python/Django, PHP/Laravel].
+                        </p>
+                        <p>
+                            Beyond coding, I enjoy [Mention a hobby or interest, e.g., hiking, reading sci-fi novels,
+                            playing the guitar]. I believe a balanced life fuels creativity and perspective, which I
+                            bring back into my work. I'm always open to collaborating on interesting projects or
+                            discussing new tech!
+                        </p>
+                        <!-- Optional: Add more paragraphs or details as needed -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="py-5 bg-body-tertiary">
+            <div class="container">
+                <h2 class="border-bottom pb-3 mb-4">Resume</h2>
+
+                <!-- Optional: Download Resume Button -->
+                <div class="text-center mb-5">
+                    <!-- Link to your actual resume PDF file -->
+                    <a href="assets/Your_Name_Resume.pdf" class="btn btn-primary btn-lg" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="bi bi-download me-2"></i> Download Full Resume (PDF)
+                    </a>
+                    <!-- Make sure to add your PDF to the 'assets' folder -->
+                    <!-- Add Bootstrap Icons CDN if you haven't already -->
+                </div>
+
+                <!-- Work Experience -->
+                <div class="mb-5">
+                    <h3 class="mb-4">Work Experience</h3>
+
+                    <!-- Experience Item 1 -->
+                    <div class="row mb-4">
+                        <div class="col-md-3">
+                            <p class="fw-bold mb-1">[Job Title]</p>
+                            <p class="text-muted small mb-1">[Company Name], [City, State/Country]</p>
+                            <p class="text-muted small mb-2 mb-md-0">[Start Date] – [End Date or Present]</p>
+                        </div>
+                        <div class="col-md-9">
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-dot me-1"></i>[Responsibility or Achievement 1]</li>
+                                <li><i class="bi bi-dot me-1"></i>[Responsibility or Achievement 2]</li>
+                                <li><i class="bi bi-dot me-1"></i>[Responsibility or Achievement 3 - Add more as needed]
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr class="d-md-none">
+
+                    <!-- Experience Item 2 
+                    <div class="row mb-4">
+                        <div class="col-md-3">
+                            <p class="fw-bold mb-1">[Previous Job Title]</p>
+                            <p class="text-muted small mb-1">[Previous Company Name], [City, State/Country]</p>
+                            <p class="text-muted small mb-2 mb-md-0">[Start Date] – [End Date]</p>
+                        </div>
+                        <div class="col-md-9">
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-dot me-1"></i>[Responsibility or Achievement 1]</li>
+                                <li><i class="bi bi-dot me-1"></i>[Responsibility or Achievement 2]</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr class="d-md-none">
+
+                    <!-- Add more experience items as needed -->
+
+                </div> <!-- End Work Experience -->
+
+                <!-- Education -->
+                <div class="mb-5">
+                    <h3 class="mb-4">Education</h3>
+
+                    <!-- Education Item 1 -->
+                    <div class="row mb-4">
+                        <div class="col-md-3">
+                            <p class="fw-bold mb-1">[Degree Name or Certification]</p>
+                            <p class="text-muted small mb-1">[Institution Name], [City, State/Country]</p>
+                            <p class="text-muted small mb-2 mb-md-0">[Year Graduated or Expected Graduation]</p>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="mb-1">[Optional: Minor, Concentration, Thesis Title, or Key Courses]</p>
+                            <p class="small text-muted">[Optional: GPA, Honors, relevant activities]</p>
+                        </div>
+                    </div>
+                    <hr class="d-md-none">
+
+                    <!-- Education Item 2 (Copy and paste structure if needed) -->
+                    <div class="row mb-4">
+                        <div class="col-md-3">
+                            <p class="fw-bold mb-1">[Another Degree or Certification]</p>
+                            <p class="text-muted small mb-1">[Institution Name], [City, State/Country]</p>
+                            <p class="text-muted small mb-2 mb-md-0">[Year Graduated]</p>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="mb-1">[Relevant details]</p>
+                        </div>
+                    </div>
+                    <hr class="d-md-none">
+
+                    <!-- Add more education items as needed -->
+
+                </div> <!-- End Education -->
+
+                <!-- Skills -->
+                <div>
+                    <h3 class="mb-4">Skills</h3>
+                    <div class="row">
+                        <!-- Skill Category 1 -->
+                        <div class="col-md-6 mb-4">
+                            <h4 class="fs-5 mb-3">Languages & Databases</h4>
+                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., JavaScript]</span>
+                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., HTML5]</span>
+                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., CSS3]</span>
+                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., Python]</span>
+                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., SQL]</span>
+                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., NoSQL (MongoDB)]</span>
+                            <!-- Add more -->
+                        </div>
+
+                        <!-- Skill Category 2 -->
+                        <div class="col-md-6 mb-4">
+                            <h4 class="fs-5 mb-3">Frameworks & Libraries</h4>
+                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., React]</span>
+                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., Node.js]</span>
+                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., Express]</span>
+                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., Bootstrap]</span>
+                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., Django/Flask (if
+                                applicable)]</span>
+                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., jQuery (if
+                                relevant)]</span>
+                            <!-- Add more -->
+                        </div>
+
+                        <!-- Skill Category 3 -->
+                        <div class="col-md-6 mb-4">
+                            <h4 class="fs-5 mb-3">Tools & Platforms</h4>
+                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., Git & GitHub]</span>
+                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., Docker]</span>
+                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., AWS/Azure/GCP]</span>
+                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., VS Code]</span>
+                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., Linux/Unix]</span>
+                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., JIRA/Trello]</span>
+                            <!-- Add more -->
+                        </div>
+
+                        <!-- Skill Category 4 (Optional) -->
+                        <div class="col-md-6 mb-4">
+                            <h4 class="fs-5 mb-3">[Other Category e.g., Methodologies]</h4>
+                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., Agile/Scrum]</span>
+                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., RESTful APIs]</span>
+                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., CI/CD]</span>
+                            <!-- Add more -->
+                        </div>
+                    </div>
+                </div> <!-- End Skills -->
+
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-5">
+            <div class="container">
+                <h2 class="border-bottom pb-3 mb-5">Projects</h2>
+
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <!-- Responsive Grid: 1 col default, 2 on md, 3 on lg. g-4 adds gaps -->
+
+                    <!-- Project Card 1 -->
+                    <div class="col">
+                        <div class="card h-100 shadow-sm"> <!-- h-100 makes cards in the same row equal height -->
+                            <!-- Use actual image path or placeholder -->
+                            <img src="assets/project1-thumb.jpg" class="card-img-top"
+                                alt="Thumbnail for [Project 1 Name]">
+                            <!-- Placeholder: https://via.placeholder.com/300x200?text=Project+1 -->
+                            <div class="card-body d-flex flex-column"> <!-- flex-column helps push buttons to bottom -->
+                                <h5 class="card-title">[Project 1 Name]</h5>
+                                <p class="card-text text-muted flex-grow-1">
+                                    <!-- flex-grow-1 makes text take available space -->
+                                    [Brief description of the project, technologies used, and its purpose. Keep it
+                                    concise, maybe 2-3 sentences.]
+                                </p>
+                                <!-- Optional Links -->
+                                <div class="mt-auto"> <!-- Pushes buttons to the bottom -->
+                                    <a href="[Link to Live Demo or Site]" class="btn btn-sm btn-outline-primary me-2"
+                                        target="_blank" rel="noopener noreferrer">
+                                        <i class="bi bi-box-arrow-up-right me-1"></i> Live Demo
+                                    </a>
+                                    <a href="[Link to GitHub Repo]" class="btn btn-sm btn-outline-secondary"
+                                        target="_blank" rel="noopener noreferrer">
+                                        <i class="bi bi-github me-1"></i> Code
+                                    </a>
+                                    <!-- Remove buttons if not applicable -->
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- End Project Card 1 -->
+
+                    <!-- Project Card 2 -->
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <img src="assets/project2-thumb.jpg" class="card-img-top"
+                                alt="Thumbnail for [Project 2 Name]">
+                            <!-- Placeholder: https://via.placeholder.com/300x200?text=Project+2 -->
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">[Project 2 Name]</h5>
+                                <p class="card-text text-muted flex-grow-1">
+                                    [Brief description of the project, technologies used, and its purpose.]
+                                </p>
+                                <div class="mt-auto">
+                                    <a href="[Link to Live Demo or Site]" class="btn btn-sm btn-outline-primary me-2"
+                                        target="_blank" rel="noopener noreferrer">
+                                        <i class="bi bi-box-arrow-up-right me-1"></i> Live Demo
+                                    </a>
+                                    <a href="[Link to GitHub Repo]" class="btn btn-sm btn-outline-secondary"
+                                        target="_blank" rel="noopener noreferrer">
+                                        <i class="bi bi-github me-1"></i> Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- End Project Card 2 -->
+
+                    <!-- Project Card 3 (Copy the structure for more projects) -->
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <img src="assets/project3-thumb.jpg" class="card-img-top"
+                                alt="Thumbnail for [Project 3 Name]">
+                            <!-- Placeholder: https://via.placeholder.com/300x200?text=Project+3 -->
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">[Project 3 Name]</h5>
+                                <p class="card-text text-muted flex-grow-1">
+                                    [Brief description of the project, technologies used, and its purpose.]
+                                </p>
+                                <div class="mt-auto">
+                                    <!-- Example: Maybe only a Code link for this one -->
+                                    <a href="[Link to GitHub Repo]" class="btn btn-sm btn-outline-secondary"
+                                        target="_blank" rel="noopener noreferrer">
+                                        <i class="bi bi-github me-1"></i> Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- End Project Card 3 -->
+
+                    <!-- Add more project cards by copying the '<div class="col">...</div>' structure -->
+
+                </div> <!-- End row -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-5 bg-body-tertiary">
+            <div class="container text-center">
+                <h2 class="border-bottom pb-3 mb-4 d-inline-block">Contact Me</h2>
+                <p class="lead mb-4">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of your
+                    visions. <br> Feel free to get in touch!
+                </p>
+
+                <p class="fst-italic text-muted mb-5">
+                    "Living, learning, & leveling up one day at a time."
+                </p>
+
+
+                <div class="row justify-content-center gy-3">
+                    <!-- Email -->
+                    <div class="col-md-auto">
+                        <i class="bi bi-envelope-fill fs-4 me-2 align-middle"></i>
+                        <a href="mailto:[your.email@example.com]"
+                            class="link-body-emphasis text-decoration-none">[your.email@example.com]</a>
+                    </div>
+                    <!-- LinkedIn (Optional) -->
+                    <div class="col-md-auto">
+                        <i class="bi bi-linkedin fs-4 me-2 align-middle"></i>
+                        <a href="[Your LinkedIn Profile URL]" class="link-body-emphasis text-decoration-none"
+                            target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </div>
+                    <!-- GitHub -->
+                    <div class="col-md-auto">
+                        <i class="bi bi-github fs-4 me-2 align-middle"></i>
+                        <a href="https://github.com/Martin-Ferrero-Thompson" class="link-body-emphasis text-decoration-none"
+                            target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                    <!-- Location -->
+                    <div class="col-md-auto">
+                        <i class="bi bi-geo-alt-fill fs-4 me-2 align-middle"></i>
+                        <span class="text-muted">Pamplona, España</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white text-center">
+        <div class="container">
+            <p class="mb-0">© 2025 Design Code Mastery. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Color Mode Switcher Script -->
+    <script src="js/color-modes.js"></script>
+
+</body>
+
+</html>

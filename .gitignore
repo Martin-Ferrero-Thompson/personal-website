@@ -12,3 +12,5 @@ yarn-error.log*
 # Optional build/distribution folder (if you add one later)
 # dist/
 # build/
+
+research/

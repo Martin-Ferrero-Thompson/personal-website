@@ -473,91 +473,202 @@
         <!-- Projects Section -->
         <section id="projects" class="py-5">
             <div class="container">
-                <h2 class="border-bottom pb-3 mb-5">Projects</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="display-4 fw-bold mb-4">Featured Projects</h2>
+                        <p class="lead mb-4">
+                            Showcasing my latest work and creative solutions
+                        </p>
+                        <p class="fst-italic text-muted mb-5">
+                            "Every project is an opportunity to learn, to figure out problems and challenges, to invent and reinvent"
+                        </p>
+                    </div>
+                </div>
 
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                    <!-- Responsive Grid: 1 col default, 2 on md, 3 on lg. g-4 adds gaps -->
+                <!-- Project Filter -->
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-8">
+                        <div class="d-flex justify-content-center flex-wrap gap-2">
+                            <button class="btn btn-primary bg-opacity-10 active" data-filter="all">All Projects</button>
+                            <button class="btn btn-primary bg-opacity-10" data-filter="web">Web Development</button>
+                            <button class="btn btn-primary bg-opacity-10" data-filter="ai">AI Integration</button>
+                            <button class="btn btn-primary bg-opacity-10" data-filter="mobile">Mobile Apps</button>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="row g-4">
                     <!-- Project Card 1 -->
-                    <div class="col">
-                        <div class="card h-100 shadow-sm"> <!-- h-100 makes cards in the same row equal height -->
-                            <!-- Use actual image path or placeholder -->
-                            <img src="assets/project1-thumb.jpg" class="card-img-top"
-                                alt="Thumbnail for [Project 1 Name]">
-                            <!-- Placeholder: https://via.placeholder.com/300x200?text=Project+1 -->
-                            <div class="card-body d-flex flex-column"> <!-- flex-column helps push buttons to bottom -->
-                                <h5 class="card-title">[Project 1 Name]</h5>
-                                <p class="card-text text-muted flex-grow-1">
-                                    <!-- flex-grow-1 makes text take available space -->
-                                    [Brief description of the project, technologies used, and its purpose. Keep it
-                                    concise, maybe 2-3 sentences.]
+                    <div class="col-md-6 col-lg-4" data-category="web">
+                        <div class="card border-0 shadow-sm h-100 project-card">
+                            <div class="position-relative">
+                                <img src="assets/project1-thumb.jpg" class="card-img-top" alt="Project 1 Thumbnail">
+                                <div class="project-overlay d-flex align-items-center justify-content-center">
+                                    <div class="d-flex gap-2">
+                                        <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#project1Modal">
+                                            <i class="bi bi-eye-fill"></i>
+                                        </a>
+                                        <a href="[Live Demo URL]" class="btn btn-primary btn-sm" target="_blank">
+                                            <i class="bi bi-box-arrow-up-right"></i>
+                                        </a>
+                                        <a href="[GitHub URL]" class="btn btn-primary btn-sm" target="_blank">
+                                            <i class="bi bi-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="contact-icon-wrapper bg-primary bg-opacity-10 p-2 rounded-circle me-2">
+                                        <i class="bi bi-code-square fs-5 text-primary"></i>
+                                    </div>
+                                    <h5 class="card-title mb-0">[Project 1 Name]</h5>
+                                </div>
+                                <p class="card-text text-muted">
+                                    [Brief project description that highlights the key features and technologies used]
                                 </p>
-                                <!-- Optional Links -->
-                                <div class="mt-auto"> <!-- Pushes buttons to the bottom -->
-                                    <a href="[Link to Live Demo or Site]" class="btn btn-sm btn-outline-primary me-2"
-                                        target="_blank" rel="noopener noreferrer">
-                                        <i class="bi bi-box-arrow-up-right me-1"></i> Live Demo
-                                    </a>
-                                    <a href="[Link to GitHub Repo]" class="btn btn-sm btn-outline-secondary"
-                                        target="_blank" rel="noopener noreferrer">
-                                        <i class="bi bi-github me-1"></i> Code
-                                    </a>
-                                    <!-- Remove buttons if not applicable -->
+                                <div class="d-flex flex-wrap gap-2 mt-3">
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">React</span>
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">Node.js</span>
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">MongoDB</span>
                                 </div>
                             </div>
                         </div>
-                    </div> <!-- End Project Card 1 -->
+                    </div>
 
                     <!-- Project Card 2 -->
-                    <div class="col">
-                        <div class="card h-100 shadow-sm">
-                            <img src="assets/project2-thumb.jpg" class="card-img-top"
-                                alt="Thumbnail for [Project 2 Name]">
-                            <!-- Placeholder: https://via.placeholder.com/300x200?text=Project+2 -->
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">[Project 2 Name]</h5>
-                                <p class="card-text text-muted flex-grow-1">
-                                    [Brief description of the project, technologies used, and its purpose.]
+                    <div class="col-md-6 col-lg-4" data-category="ai">
+                        <div class="card border-0 shadow-sm h-100 project-card">
+                            <div class="position-relative">
+                                <img src="assets/project2-thumb.jpg" class="card-img-top" alt="Project 2 Thumbnail">
+                                <div class="project-overlay d-flex align-items-center justify-content-center">
+                                    <div class="d-flex gap-2">
+                                        <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#project2Modal">
+                                            <i class="bi bi-eye-fill"></i>
+                                        </a>
+                                        <a href="[Live Demo URL]" class="btn btn-primary btn-sm" target="_blank">
+                                            <i class="bi bi-box-arrow-up-right"></i>
+                                        </a>
+                                        <a href="[GitHub URL]" class="btn btn-primary btn-sm" target="_blank">
+                                            <i class="bi bi-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="contact-icon-wrapper bg-primary bg-opacity-10 p-2 rounded-circle me-2">
+                                        <i class="bi bi-robot fs-5 text-primary"></i>
+                                    </div>
+                                    <h5 class="card-title mb-0">[Project 2 Name]</h5>
+                                </div>
+                                <p class="card-text text-muted">
+                                    [Brief project description that highlights the key features and technologies used]
                                 </p>
-                                <div class="mt-auto">
-                                    <a href="[Link to Live Demo or Site]" class="btn btn-sm btn-outline-primary me-2"
-                                        target="_blank" rel="noopener noreferrer">
-                                        <i class="bi bi-box-arrow-up-right me-1"></i> Live Demo
-                                    </a>
-                                    <a href="[Link to GitHub Repo]" class="btn btn-sm btn-outline-secondary"
-                                        target="_blank" rel="noopener noreferrer">
-                                        <i class="bi bi-github me-1"></i> Code
-                                    </a>
+                                <div class="d-flex flex-wrap gap-2 mt-3">
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">Python</span>
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">TensorFlow</span>
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">Flask</span>
                                 </div>
                             </div>
                         </div>
-                    </div> <!-- End Project Card 2 -->
+                    </div>
 
-                    <!-- Project Card 3 (Copy the structure for more projects) -->
-                    <div class="col">
-                        <div class="card h-100 shadow-sm">
-                            <img src="assets/project3-thumb.jpg" class="card-img-top"
-                                alt="Thumbnail for [Project 3 Name]">
-                            <!-- Placeholder: https://via.placeholder.com/300x200?text=Project+3 -->
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">[Project 3 Name]</h5>
-                                <p class="card-text text-muted flex-grow-1">
-                                    [Brief description of the project, technologies used, and its purpose.]
+                    <!-- Project Card 3 -->
+                    <div class="col-md-6 col-lg-4" data-category="mobile">
+                        <div class="card border-0 shadow-sm h-100 project-card">
+                            <div class="position-relative">
+                                <img src="assets/project3-thumb.jpg" class="card-img-top" alt="Project 3 Thumbnail">
+                                <div class="project-overlay d-flex align-items-center justify-content-center">
+                                    <div class="d-flex gap-2">
+                                        <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#project3Modal">
+                                            <i class="bi bi-eye-fill"></i>
+                                        </a>
+                                        <a href="[Live Demo URL]" class="btn btn-primary btn-sm" target="_blank">
+                                            <i class="bi bi-box-arrow-up-right"></i>
+                                        </a>
+                                        <a href="[GitHub URL]" class="btn btn-primary btn-sm" target="_blank">
+                                            <i class="bi bi-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="contact-icon-wrapper bg-primary bg-opacity-10 p-2 rounded-circle me-2">
+                                        <i class="bi bi-phone fs-5 text-primary"></i>
+                                    </div>
+                                    <h5 class="card-title mb-0">[Project 3 Name]</h5>
+                                </div>
+                                <p class="card-text text-muted">
+                                    [Brief project description that highlights the key features and technologies used]
                                 </p>
-                                <div class="mt-auto">
-                                    <!-- Example: Maybe only a Code link for this one -->
-                                    <a href="[Link to GitHub Repo]" class="btn btn-sm btn-outline-secondary"
-                                        target="_blank" rel="noopener noreferrer">
-                                        <i class="bi bi-github me-1"></i> Code
-                                    </a>
+                                <div class="d-flex flex-wrap gap-2 mt-3">
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">React Native</span>
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">Firebase</span>
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">Redux</span>
                                 </div>
                             </div>
                         </div>
-                    </div> <!-- End Project Card 3 -->
+                    </div>
+                </div>
 
-                    <!-- Add more project cards by copying the '<div class="col">...</div>' structure -->
+                <!-- Project Modals -->
+                <!-- Project 1 Modal -->
+                <div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <h5 class="modal-title" id="project1ModalLabel">[Project 1 Name]</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="assets/project1-thumb.jpg" class="img-fluid rounded" alt="Project 1 Screenshot">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="fw-bold mb-3">Project Overview</h6>
+                                        <p>[Detailed project description]</p>
+                                        
+                                        <h6 class="fw-bold mb-3">Key Features</h6>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2">
+                                                <i class="bi bi-check2-circle text-primary me-2"></i>
+                                                [Feature 1]
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-check2-circle text-primary me-2"></i>
+                                                [Feature 2]
+                                            </li>
+                                            <li>
+                                                <i class="bi bi-check2-circle text-primary me-2"></i>
+                                                [Feature 3]
+                                            </li>
+                                        </ul>
 
-                </div> <!-- End row -->
+                                        <h6 class="fw-bold mb-3">Technologies Used</h6>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <span class="badge bg-primary bg-opacity-10 text-primary">React</span>
+                                            <span class="badge bg-primary bg-opacity-10 text-primary">Node.js</span>
+                                            <span class="badge bg-primary bg-opacity-10 text-primary">MongoDB</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer border-0">
+                                <a href="[Live Demo URL]" class="btn btn-primary" target="_blank">
+                                    <i class="bi bi-box-arrow-up-right me-2"></i>View Live Demo
+                                </a>
+                                <a href="[GitHub URL]" class="btn btn-outline-primary" target="_blank">
+                                    <i class="bi bi-github me-2"></i>View Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Similar modals for Project 2 and 3 -->
             </div>
         </section>
 

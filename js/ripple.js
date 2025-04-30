@@ -29,4 +29,35 @@ document.addEventListener('DOMContentLoaded', () => {
         link.style.overflow = 'hidden';
         link.addEventListener('click', createRipple);
     });
+
+    // Project filtering functionality
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const projectCards = document.querySelectorAll('[data-category]');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+
+            const filterValue = this.getAttribute('data-filter');
+
+            projectCards.forEach(card => {
+                // Reset animation
+                card.style.animation = 'none';
+                card.offsetHeight; // Trigger reflow
+                card.style.animation = null;
+
+                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                    card.style.display = 'block';
+                    // Add animation with delay based on index
+                    const delay = Array.from(projectCards).indexOf(card) * 0.1;
+                    card.style.animationDelay = `${delay}s`;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
 });

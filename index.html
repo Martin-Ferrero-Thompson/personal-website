@@ -242,149 +242,231 @@
         <!-- Resume Section -->
         <section id="resume" class="py-5 bg-body-tertiary">
             <div class="container">
-                <h2 class="border-bottom pb-3 mb-4">Resume</h2>
-
-                <!-- Optional: Download Resume Button -->
-                <div class="text-center mb-5">
-                    <!-- Link to your actual resume PDF file -->
-                    <a href="assets/Your_Name_Resume.pdf" class="btn btn-primary btn-lg" target="_blank"
-                        rel="noopener noreferrer">
-                        <i class="bi bi-download me-2"></i> Download Full Resume (PDF)
-                    </a>
-                    <!-- Make sure to add your PDF to the 'assets' folder -->
-                    <!-- Add Bootstrap Icons CDN if you haven't already -->
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="display-4 fw-bold mb-4">Professional Journey</h2>
+                        <p class="lead mb-4">
+                            A chronicle of my experience, education, and skill set
+                        </p>
+                        <div class="mb-5">
+                            <a href="assets/Your_Name_Resume.pdf" class="btn btn-primary btn-lg" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="bi bi-download me-2"></i> Download Full Resume (PDF)
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Work Experience -->
-                <div class="mb-5">
-                    <h3 class="mb-4">Work Experience</h3>
+                <div class="row justify-content-center g-4">
+                    <!-- Work Experience Card -->
+                    <div class="col-md-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="contact-icon-wrapper bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                        <i class="bi bi-briefcase-fill fs-4 text-primary"></i>
+                                    </div>
+                                    <h3 class="card-title h4 mb-0">Work Experience</h3>
+                                </div>
 
-                    <!-- Experience Item 1 -->
-                    <div class="row mb-4">
-                        <div class="col-md-3">
-                            <p class="fw-bold mb-1">[Job Title]</p>
-                            <p class="text-muted small mb-1">[Company Name], [City, State/Country]</p>
-                            <p class="text-muted small mb-2 mb-md-0">[Start Date] – [End Date or Present]</p>
-                        </div>
-                        <div class="col-md-9">
-                            <ul class="list-unstyled">
-                                <li><i class="bi bi-dot me-1"></i>[Responsibility or Achievement 1]</li>
-                                <li><i class="bi bi-dot me-1"></i>[Responsibility or Achievement 2]</li>
-                                <li><i class="bi bi-dot me-1"></i>[Responsibility or Achievement 3 - Add more as needed]
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr class="d-md-none">
+                                <!-- Experience Timeline -->
+                                <div class="position-relative timeline-container">
+                                    <!-- Experience Item 1 -->
+                                    <div class="timeline-item mb-4">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="timeline-info">
+                                                    <h4 class="h6 fw-bold mb-1">[Job Title]</h4>
+                                                    <p class="text-primary mb-1">[Company Name]</p>
+                                                    <p class="text-muted small mb-2">[City, State/Country]</p>
+                                                    <span class="badge bg-primary bg-opacity-10 text-primary">
+                                                        [Start Date] – [End Date or Present]
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div class="timeline-content">
+                                                    <ul class="list-unstyled mb-0">
+                                                        <li class="mb-2">
+                                                            <i class="bi bi-check2-circle text-primary me-2"></i>
+                                                            [Responsibility or Achievement 1]
+                                                        </li>
+                                                        <li class="mb-2">
+                                                            <i class="bi bi-check2-circle text-primary me-2"></i>
+                                                            [Responsibility or Achievement 2]
+                                                        </li>
+                                                        <li>
+                                                            <i class="bi bi-check2-circle text-primary me-2"></i>
+                                                            [Responsibility or Achievement 3]
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                    <!-- Experience Item 2 
-                    <div class="row mb-4">
-                        <div class="col-md-3">
-                            <p class="fw-bold mb-1">[Previous Job Title]</p>
-                            <p class="text-muted small mb-1">[Previous Company Name], [City, State/Country]</p>
-                            <p class="text-muted small mb-2 mb-md-0">[Start Date] – [End Date]</p>
-                        </div>
-                        <div class="col-md-9">
-                            <ul class="list-unstyled">
-                                <li><i class="bi bi-dot me-1"></i>[Responsibility or Achievement 1]</li>
-                                <li><i class="bi bi-dot me-1"></i>[Responsibility or Achievement 2]</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr class="d-md-none">
-
-                    Add more experience items as needed -->
-
-                </div> <!-- End Work Experience -->
-
-                <!-- Education -->
-                <div class="mb-5">
-                    <h3 class="mb-4">Education</h3>
-
-                    <!-- Education Item 1 -->
-                    <div class="row mb-4">
-                        <div class="col-md-3">
-                            <p class="fw-bold mb-1">[Degree Name or Certification]</p>
-                            <p class="text-muted small mb-1">[Institution Name], [City, State/Country]</p>
-                            <p class="text-muted small mb-2 mb-md-0">[Year Graduated or Expected Graduation]</p>
-                        </div>
-                        <div class="col-md-9">
-                            <p class="mb-1">[Optional: Minor, Concentration, Thesis Title, or Key Courses]</p>
-                            <p class="small text-muted">[Optional: GPA, Honors, relevant activities]</p>
-                        </div>
-                    </div>
-                    <hr class="d-md-none">
-
-                    <!-- Education Item 2 (Copy and paste structure if needed) -->
-                    <div class="row mb-4">
-                        <div class="col-md-3">
-                            <p class="fw-bold mb-1">[Another Degree or Certification]</p>
-                            <p class="text-muted small mb-1">[Institution Name], [City, State/Country]</p>
-                            <p class="text-muted small mb-2 mb-md-0">[Year Graduated]</p>
-                        </div>
-                        <div class="col-md-9">
-                            <p class="mb-1">[Relevant details]</p>
-                        </div>
-                    </div>
-                    <hr class="d-md-none">
-
-                    <!-- Add more education items as needed -->
-
-                </div> <!-- End Education -->
-
-                <!-- Skills -->
-                <div>
-                    <h3 class="mb-4">Skills</h3>
-                    <div class="row">
-                        <!-- Skill Category 1 -->
-                        <div class="col-md-6 mb-4">
-                            <h4 class="fs-5 mb-3">Languages & Databases</h4>
-                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., JavaScript]</span>
-                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., HTML5]</span>
-                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., CSS3]</span>
-                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., Python]</span>
-                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., SQL]</span>
-                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., NoSQL (MongoDB)]</span>
-                            <!-- Add more -->
-                        </div>
-
-                        <!-- Skill Category 2 -->
-                        <div class="col-md-6 mb-4">
-                            <h4 class="fs-5 mb-3">Frameworks & Libraries</h4>
-                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., React]</span>
-                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., Node.js]</span>
-                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., Express]</span>
-                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., Bootstrap]</span>
-                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., Django/Flask (if
-                                applicable)]</span>
-                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., jQuery (if
-                                relevant)]</span>
-                            <!-- Add more -->
-                        </div>
-
-                        <!-- Skill Category 3 -->
-                        <div class="col-md-6 mb-4">
-                            <h4 class="fs-5 mb-3">Tools & Platforms</h4>
-                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., Git & GitHub]</span>
-                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., Docker]</span>
-                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., AWS/Azure/GCP]</span>
-                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., VS Code]</span>
-                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., Linux/Unix]</span>
-                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., JIRA/Trello]</span>
-                            <!-- Add more -->
-                        </div>
-
-                        <!-- Skill Category 4 (Optional) -->
-                        <div class="col-md-6 mb-4">
-                            <h4 class="fs-5 mb-3">[Other Category e.g., Methodologies]</h4>
-                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., Agile/Scrum]</span>
-                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., RESTful APIs]</span>
-                            <span class="badge text-bg-secondary me-1 mb-1 p-2">[Skill e.g., CI/CD]</span>
-                            <!-- Add more -->
+                                    <!-- Experience Item 2 -->
+                                    <div class="timeline-item">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="timeline-info">
+                                                    <h4 class="h6 fw-bold mb-1">[Previous Job Title]</h4>
+                                                    <p class="text-primary mb-1">[Previous Company Name]</p>
+                                                    <p class="text-muted small mb-2">[City, State/Country]</p>
+                                                    <span class="badge bg-primary bg-opacity-10 text-primary">
+                                                        [Start Date] – [End Date]
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div class="timeline-content">
+                                                    <ul class="list-unstyled mb-0">
+                                                        <li class="mb-2">
+                                                            <i class="bi bi-check2-circle text-primary me-2"></i>
+                                                            [Responsibility or Achievement 1]
+                                                        </li>
+                                                        <li>
+                                                            <i class="bi bi-check2-circle text-primary me-2"></i>
+                                                            [Responsibility or Achievement 2]
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div> <!-- End Skills -->
 
+                    <!-- Education Card -->
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="contact-icon-wrapper bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                        <i class="bi bi-mortarboard-fill fs-4 text-primary"></i>
+                                    </div>
+                                    <h3 class="card-title h4 mb-0">Education</h3>
+                                </div>
+
+                                <!-- Education Item 1 -->
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="contact-icon-wrapper bg-primary bg-opacity-10 p-2 rounded-circle me-2">
+                                            <i class="bi bi-bookmark-fill fs-5 text-primary"></i>
+                                        </div>
+                                        <h4 class="h6 fw-bold mb-0">[Degree Name or Certification]</h4>
+                                    </div>
+                                    <div class="ps-5">
+                                        <p class="text-primary mb-1">[Institution Name]</p>
+                                        <p class="text-muted small mb-2">[City, State/Country]</p>
+                                        <p class="text-muted small mb-2">[Year Graduated or Expected Graduation]</p>
+                                        <p class="small mb-0">[Optional: Minor, Concentration, or Key Courses]</p>
+                                    </div>
+                                </div>
+
+                                <!-- Education Item 2 -->
+                                <div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="contact-icon-wrapper bg-primary bg-opacity-10 p-2 rounded-circle me-2">
+                                            <i class="bi bi-bookmark-fill fs-5 text-primary"></i>
+                                        </div>
+                                        <h4 class="h6 fw-bold mb-0">[Another Degree or Certification]</h4>
+                                    </div>
+                                    <div class="ps-5">
+                                        <p class="text-primary mb-1">[Institution Name]</p>
+                                        <p class="text-muted small mb-2">[City, State/Country]</p>
+                                        <p class="text-muted small mb-2">[Year Graduated]</p>
+                                        <p class="small mb-0">[Relevant details]</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills Card -->
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="contact-icon-wrapper bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                        <i class="bi bi-tools fs-4 text-primary"></i>
+                                    </div>
+                                    <h3 class="card-title h4 mb-0">Skills & Tools</h3>
+                                </div>
+
+                                <!-- Languages & Databases -->
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="contact-icon-wrapper bg-primary bg-opacity-10 p-2 rounded-circle me-2">
+                                            <i class="bi bi-code-square fs-5 text-primary"></i>
+                                        </div>
+                                        <h4 class="h6 mb-0">Languages & Databases</h4>
+                                    </div>
+                                    <div class="d-flex flex-wrap gap-2 ps-5">
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">JavaScript</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">HTML5</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">CSS3</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">Python</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">SQL</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">MongoDB</span>
+                                    </div>
+                                </div>
+
+                                <!-- Frameworks & Libraries -->
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="contact-icon-wrapper bg-primary bg-opacity-10 p-2 rounded-circle me-2">
+                                            <i class="bi bi-box fs-5 text-primary"></i>
+                                        </div>
+                                        <h4 class="h6 mb-0">Frameworks & Libraries</h4>
+                                    </div>
+                                    <div class="d-flex flex-wrap gap-2 ps-5">
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">React</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">Node.js</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">Express</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">Bootstrap</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">Django</span>
+                                    </div>
+                                </div>
+
+                                <!-- Tools & Platforms -->
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="contact-icon-wrapper bg-primary bg-opacity-10 p-2 rounded-circle me-2">
+                                            <i class="bi bi-gear fs-5 text-primary"></i>
+                                        </div>
+                                        <h4 class="h6 mb-0">Tools & Platforms</h4>
+                                    </div>
+                                    <div class="d-flex flex-wrap gap-2 ps-5">
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">Git & GitHub</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">Docker</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">AWS</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">VS Code</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">Linux</span>
+                                    </div>
+                                </div>
+
+                                <!-- Methodologies -->
+                                <div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="contact-icon-wrapper bg-primary bg-opacity-10 p-2 rounded-circle me-2">
+                                            <i class="bi bi-diagram-3 fs-5 text-primary"></i>
+                                        </div>
+                                        <h4 class="h6 mb-0">Methodologies</h4>
+                                    </div>
+                                    <div class="d-flex flex-wrap gap-2 ps-5">
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">Agile/Scrum</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">RESTful APIs</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">CI/CD</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">TDD</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 

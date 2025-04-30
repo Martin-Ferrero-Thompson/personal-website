@@ -27,8 +27,6 @@
       }
     }
   
-    setTheme(getPreferredTheme())
-  
     const showActiveTheme = (theme, focus = false) => {
       const themeSwitcher = document.querySelector('#bd-theme')
   
@@ -41,25 +39,28 @@
       const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
       const iconOfActiveBtn = btnToActive.querySelector('i').dataset.themeIcon || btnToActive.querySelector('i').classList.value.split(' ').find(cls => cls.startsWith('bi-'))
   
-  
       document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
         element.classList.remove('active')
         element.setAttribute('aria-pressed', 'false')
-        element.querySelector('.bi-check2').classList.add('d-none') // Hide checkmark
+        element.querySelector('.bi-check2').classList.add('d-none')
       })
   
       btnToActive.classList.add('active')
       btnToActive.setAttribute('aria-pressed', 'true')
-      btnToActive.querySelector('.bi-check2').classList.remove('d-none') // Show checkmark
-      activeThemeIcon.classList.value = `bi ${iconOfActiveBtn} theme-icon-active` // Update the main button icon
+      btnToActive.querySelector('.bi-check2').classList.remove('d-none')
+      activeThemeIcon.classList.value = `bi ${iconOfActiveBtn} theme-icon-active`
       const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`
       themeSwitcher.setAttribute('aria-label', themeSwitcherLabel)
-  
   
       if (focus) {
         themeSwitcher.focus()
       }
     }
+  
+    // Set theme on page load
+    const theme = getPreferredTheme()
+    setTheme(theme)
+    showActiveTheme(theme)
   
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
       const storedTheme = getStoredTheme()

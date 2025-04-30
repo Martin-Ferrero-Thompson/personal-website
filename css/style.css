@@ -43,6 +43,41 @@ h1, h2, h3, h4, h5, h6 {
 }
 */
 
+/* Navigation Styles */
+.navbar-nav .nav-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navbar-nav .nav-item .nav-link {
+    font-size: 1.125rem;  /* 18px if base font size is 16px */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;  /* Adding slight letter spacing for better readability */
+    padding: 0.5rem 1rem;  /* Comfortable padding around nav items */
+    font-weight: 500;  /* Adding medium font weight for better visibility */
+    position: relative;
+    z-index: 1;
+}
+
+/* Ripple Effect */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    background-color: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
 /* Button Styles for Hero Section */
 #home .btn {
     min-width: 200px;  /* Set minimum width for consistent button sizes */

@@ -199,3 +199,46 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--bs-box-shadow-lg) !important; // Example: Increase shadow on hover (use !important sparingly if needed to override Bootstrap)
 }
 */
+
+/* Contact Section Styles */
+.contact-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.contact-icon-wrapper:hover {
+    transform: scale(1.1);
+}
+
+#contact .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+#contact .badge {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+#contact .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(var(--bs-primary-rgb), 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Dark mode specific styles */
+[data-bs-theme="dark"] #contact .contact-icon-wrapper {
+    background-color: rgba(var(--bs-primary-rgb), 0.15) !important;
+}
+
+[data-bs-theme="dark"] #contact .badge {
+    background-color: rgba(var(--bs-primary-rgb), 0.15) !important;
+}

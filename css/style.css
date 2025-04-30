@@ -32,6 +32,36 @@ h1, h2, h3, h4, h5, h6 {
 }
 */
 
+/* Button Styles for Hero Section */
+#home .btn {
+    min-width: 200px;  /* Set minimum width for consistent button sizes */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition for hover effects */
+    display: inline-flex;  /* Use flexbox for icon alignment */
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;  /* Space between icon and text */
+}
+
+#home .btn:hover {
+    transform: translateY(-2px);  /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Shadow on hover */
+}
+
+#home .btn-primary {
+    border-width: 2px;  /* Slightly thicker border */
+}
+
+#home .btn-secondary {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+#home .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);  /* Slight white background on hover */
+    color: #ffffff;
+}
+
 
 /* 2. Component Adjustments */
 /* =================================== */
@@ -74,14 +104,12 @@ h1, h2, h3, h4, h5, h6 {
   /* Keep Flexbox alignment & min-height from HTML classes */
 }
 
-/* ---- ADD THIS BLOCK ---- */
 /* Ensure text elements within #home are white */
 #home h1,
 #home p {
     color: #ffffff; /* Explicitly set h1 and p text color to white */
 }
 
-/* ---- END ADDED BLOCK ---- */
 /* Button Overrides for Hero (Optional - Uncomment/Adjust as needed) */
 /* The default btn-primary should look good. */
 /* The default btn-secondary might blend in; making it outlined could be better: */

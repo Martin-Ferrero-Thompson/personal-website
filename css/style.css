@@ -26,6 +26,8 @@ body {
     font-family: var(--font-family-body);
     -webkit-font-smoothing: antialiased; /* Improves font rendering on WebKit browsers */
     -moz-osx-font-smoothing: grayscale; /* Improves font rendering on Firefox/macOS */
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
 
     /* Smooth transition for color theme changes */
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -44,21 +46,17 @@ h1, h2, h3, h4, h5, h6 {
 */
 
 /* Navigation Styles */
-.navbar-nav .nav-item {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.navbar-nav .nav-item .nav-link {
-    font-size: 1.125rem;  /* 18px if base font size is 16px */
+.navbar-nav .nav-item:not(.dropdown) .nav-link {
+    font-size: 1.125rem;
     text-transform: uppercase;
-    letter-spacing: 0.5px;  /* Adding slight letter spacing for better readability */
-    padding: 0.5rem 1rem;  /* Comfortable padding around nav items */
-    font-weight: 500;  /* Adding medium font weight for better visibility */
+    letter-spacing: 0.5px;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
     position: relative;
     z-index: 1;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    overflow: hidden;
 }
 
 /* Ripple Effect */
@@ -131,6 +129,216 @@ h1, h2, h3, h4, h5, h6 {
     height: 1em;
 }
 
+/* Theme Switcher Styles */
+#bd-theme {
+    color: rgba(255, 255, 255, 0.85); /* Light color for dark navbar */
+}
+
+#bd-theme.nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+}
+
+#bd-theme.nav-link:hover {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-bs-theme="light"] #bd-theme.nav-link {
+    color: rgba(0, 0, 0, 0.85);
+}
+
+[data-bs-theme="light"] #bd-theme.nav-link:hover {
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu[aria-labelledby="bd-theme-text"] {
+    min-width: 8rem;
+}
+
+/* Ensure dropdown items are visible in both light and dark modes */
+.dropdown-menu .dropdown-item {
+    cursor: pointer;
+}
+
+[data-bs-theme="light"] .dropdown-menu .dropdown-item {
+    color: var(--bs-dark);
+}
+
+[data-bs-theme="dark"] .dropdown-menu .dropdown-item {
+    color: var(--bs-light);
+}
+
+.dropdown-item:hover {
+    background-color: rgba(var(--bs-primary-rgb), 0.1);
+}
+
+/* Active state for the theme toggle button */
+.dropdown-item.active {
+    background-color: rgba(var(--bs-primary-rgb), 0.1);
+    color: var(--bs-primary);
+}
+
+/* Theme icon styles */
+.theme-icon-active,
+.theme-icon {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+}
+
+/* Position the check mark properly */
+.dropdown-item .bi-check2 {
+    margin-left: auto;
+    display: none;
+}
+
+.dropdown-item.active .bi-check2 {
+    display: inline-block;
+}
+
+/* Theme Toggle Styles */
+.nav-item.dropdown #bd-theme.nav-link {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.2s ease;
+}
+
+/* Theme toggle dropdown styles */
+.nav-item.dropdown .nav-link {
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    color: rgba(255, 255, 255, 0.85);
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.nav-item.dropdown .nav-link:hover,
+.nav-item.dropdown .nav-link:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu {
+    --bs-dropdown-min-width: 8rem;
+    --bs-dropdown-padding-x: 0;
+    --bs-dropdown-padding-y: 0.5rem;
+    --bs-dropdown-border-radius: 0.5rem;
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(var(--bs-primary-rgb), 0.1);
+}
+
+.dropdown-item.active {
+    background-color: rgba(var(--bs-primary-rgb), 0.1);
+    color: var(--bs-primary);
+}
+
+/* Theme icon styles */
+.theme-icon-active {
+    width: 1em;
+    height: 1em;
+    font-size: 1.25em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+[data-bs-theme="light"] .nav-item.dropdown .nav-link {
+    color: rgba(0, 0, 0, 0.75);
+}
+
+[data-bs-theme="light"] .nav-item.dropdown .nav-link:hover,
+[data-bs-theme="light"] .nav-item.dropdown .nav-link:focus {
+    color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Theme toggle button states */
+.navbar-dark .nav-item.dropdown #bd-theme.nav-link {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.navbar-dark .nav-item.dropdown #bd-theme.nav-link:hover,
+.navbar-dark .nav-item.dropdown #bd-theme.nav-link:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dropdown menu styling */
+.dropdown-menu[aria-labelledby="bd-theme"] {
+    min-width: 9rem;
+    padding: 0.5rem 0;
+}
+
+.dropdown-menu .dropdown-item {
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Icons in dropdown */
+.dropdown-item i {
+    font-size: 1.1em;
+    width: 1em;
+    height: 1em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Active state and checkmark */
+.dropdown-item.active {
+    background-color: rgba(var(--bs-primary-rgb), 0.1);
+    color: var(--bs-primary);
+}
+
+.dropdown-item .bi-check2 {
+    margin-left: auto;
+}
+
+/* Dropdown visibility and positioning */
+.navbar .dropdown-menu {
+    position: absolute;
+    z-index: 1021;
+    border: 1px solid var(--bs-border-color);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.navbar .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: var(--bs-body-color);
+}
+
+.navbar .dropdown-item:hover {
+    background-color: var(--bs-tertiary-bg);
+}
+
+.navbar .dropdown-item.active {
+    background-color: var(--bs-tertiary-bg);
+    color: var(--bs-primary);
+    font-weight: 500;
+}
+
+/* Ensure the dropdown button doesn't change appearance when clicked */
+.navbar .dropdown .btn.show {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
 
 /* 3. Section Specific Styles */
 /* =================================== */
@@ -142,12 +350,25 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;         /* Scale image to cover the section */
   background-position: center center; /* Center the image */
   background-repeat: no-repeat;   /* Do not tile the image */
+  position: relative;
   /* --- End Background Image --- */
+}
 
-  /* Remove the general color rule from here, apply it more specifically below */
-  /* color: #ffffff; */
+/* Add overlay for better text readability */
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
 
-  /* Keep Flexbox alignment & min-height from HTML classes */
+#home .container {
+    position: relative;
+    z-index: 2;
 }
 
 /* Ensure text elements within #home are white */
@@ -156,49 +377,30 @@ h1, h2, h3, h4, h5, h6 {
     color: #ffffff; /* Explicitly set h1 and p text color to white */
 }
 
-/* Button Overrides for Hero (Optional - Uncomment/Adjust as needed) */
-/* The default btn-primary should look good. */
-/* The default btn-secondary might blend in; making it outlined could be better: */
-/*
-#home .btn-secondary {
-    background-color: transparent;
-    border-color: #ffffff;
+/* Preserve white text in hero section regardless of theme */
+[data-bs-theme="dark"] #home h1,
+[data-bs-theme="dark"] #home p,
+[data-bs-theme="light"] #home h1,
+[data-bs-theme="light"] #home p {
     color: #ffffff;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; // Add transition for hover
 }
 
-#home .btn-secondary:hover {
-    background-color: rgba(255, 255, 255, 0.1); // Subtle background on hover
-    color: #ffffff; // Ensure text color remains white on hover
+/* Card styles with proper color mode support */
+.card {
+    background-color: var(--bs-card-bg);
+    border-color: var(--bs-border-color);
 }
 
-#home .btn-primary {
-   // Example: Make primary button slightly different if needed
-   // background-color: #your_custom_color;
-   // border-color: #your_custom_color;
+/* Navigation adjustments */
+.navbar-dark {
+    background-color: var(--bs-dark-bg-subtle);
 }
 
-#home .btn-primary:hover {
-    // Adjust hover if you changed the base style
+/* Button hover effects */
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--bs-primary-bg-subtle);
 }
-*/
-
-/* Other Section Examples (Keep or remove) */
-/*
-#about .img-fluid {
-  border: 3px solid var(--bs-primary); // Example: Add a border to the profile picture
-}
-
-#projects .card {
-   border: none; // Example: Remove card borders for a flatter look
-   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; // Added box-shadow transition
-}
-
-#projects .card:hover {
-    transform: translateY(-5px); // Example: Add hover effect to cards
-    box-shadow: var(--bs-box-shadow-lg) !important; // Example: Increase shadow on hover (use !important sparingly if needed to override Bootstrap)
-}
-*/
 
 /* Contact Section Styles */
 .contact-icon-wrapper {
@@ -208,6 +410,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     transition: transform 0.2s ease;
+    background-color: var(--bs-primary-bg-subtle);
 }
 
 .contact-icon-wrapper:hover {
@@ -216,6 +419,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #contact .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--bs-card-bg);
 }
 
 #contact .card:hover {
@@ -226,6 +430,8 @@ h1, h2, h3, h4, h5, h6 {
 #contact .badge {
     font-size: 0.9rem;
     font-weight: 500;
+    background-color: var(--bs-primary-bg-subtle);
+    color: var(--bs-primary-text-emphasis);
 }
 
 #contact .btn-primary:hover {
@@ -236,9 +442,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Dark mode specific styles */
 [data-bs-theme="dark"] #contact .contact-icon-wrapper {
-    background-color: rgba(var(--bs-primary-rgb), 0.15) !important;
+    background-color: var(--bs-primary-bg-subtle);
 }
 
 [data-bs-theme="dark"] #contact .badge {
-    background-color: rgba(var(--bs-primary-rgb), 0.15) !important;
+    background-color: var(--bs-primary-bg-subtle);
+}
+
+[data-bs-theme="dark"] .navbar-dark {
+    background-color: var(--bs-tertiary-bg);
+}
+
+[data-bs-theme="dark"] .card {
+    background-color: var(--bs-tertiary-bg);
 }

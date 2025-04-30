@@ -1,8 +1,8 @@
 function createRipple(event) {
-    const item = event.currentTarget;
+    const link = event.currentTarget;
     
     const ripple = document.createElement("span");
-    const rect = item.getBoundingClientRect();
+    const rect = link.getBoundingClientRect();
     
     const diameter = Math.max(rect.width, rect.height);
     const radius = diameter / 2;
@@ -13,18 +13,20 @@ function createRipple(event) {
     ripple.className = "ripple";
     
     // Remove existing ripple
-    const existingRipple = item.querySelector(".ripple");
+    const existingRipple = link.querySelector(".ripple");
     if (existingRipple) {
         existingRipple.remove();
     }
     
-    item.appendChild(ripple);
+    link.appendChild(ripple);
 }
 
-// Add ripple effect to all nav items
+// Add ripple effect to main navigation links only
 document.addEventListener('DOMContentLoaded', () => {
-    const navItems = document.querySelectorAll('.nav-item');
-    navItems.forEach(item => {
-        item.addEventListener('click', createRipple);
+    const mainNavLinks = document.querySelectorAll('.navbar-nav > .nav-item:not(.dropdown) > .nav-link');
+    mainNavLinks.forEach(link => {
+        link.style.position = 'relative';
+        link.style.overflow = 'hidden';
+        link.addEventListener('click', createRipple);
     });
 });

@@ -20,6 +20,7 @@
 :root {
     --font-family-headers: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-family-body: 'Karla', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --navbar-height: 74px; /* This accounts for the logo height (50px) plus vertical padding */
 }
 
 body {
@@ -113,6 +114,16 @@ h1, h2, h3, h4, h5, h6 {
 /* General Transitions */
 .navbar, footer, section {
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* General section styles */
+.section-padding {
+    padding: 90px 0 3rem; /* 90px top padding (accounts for navbar + spacing), 3rem bottom padding */
+}
+
+/* Remove the negative margin we added previously */
+section:not(#home) h2.display-4 {
+    margin-bottom: 1.5rem; /* Add some spacing below the headers */
 }
 
 /* Theme Switcher Icon Alignment */

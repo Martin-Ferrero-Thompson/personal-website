@@ -118,7 +118,18 @@ h1, h2, h3, h4, h5, h6 {
 
 /* General section styles */
 .section-padding {
-    padding: 90px 0 3rem; /* 90px top padding (accounts for navbar + spacing), 3rem bottom padding */
+    padding-top: calc(var(--navbar-height) + 2rem); /* navbar height + extra space */
+    padding-bottom: 5rem;
+}
+
+/* Home section should not have the extra padding since it's full height */
+#home.section-padding {
+    padding: 0;
+}
+
+/* Add padding to the container instead of the section for better spacing */
+.section-padding .container {
+    padding-top: 1rem;
 }
 
 /* Remove the negative margin we added previously */

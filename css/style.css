@@ -584,11 +584,20 @@ section:not(#home) h2.display-4 {
 /* Project Filter Buttons */
 [data-filter] {
     transition: all 0.3s ease;
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    border-color: var(--color-secondary);
+}
+
+[data-filter]:hover {
+    background-color: var(--color-secondary-dark);
+    border-color: var(--color-secondary-dark);
 }
 
 [data-filter].active {
-    background-color: var(--bs-primary) !important;
-    color: white !important;
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
 }
 
 /* Add animation for project cards */

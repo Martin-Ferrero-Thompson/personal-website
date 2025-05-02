@@ -101,6 +101,22 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-white);
 }
 
+/* Active nav-link styles */
+.navbar-nav .nav-item:not(.dropdown) .nav-link.active {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* Light theme active nav-link */
+[data-bs-theme="light"] .navbar-nav .nav-item:not(.dropdown) .nav-link.active {
+    color: var(--color-primary);
+}
+
+/* Dark theme active nav-link */
+[data-bs-theme="dark"] .navbar-nav .nav-item:not(.dropdown) .nav-link.active {
+    color: var(--color-primary-light);
+}
+
 /* Ripple Effect */
 .ripple {
     position: absolute;

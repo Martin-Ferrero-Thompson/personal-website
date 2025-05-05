@@ -506,11 +506,19 @@ section:not(#home) h2.display-4 {
 .contact-icon-wrapper {
     width: 48px;
     height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    max-width: 48px;
+    max-height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: transform 0.2s ease;
     background-color: #7C3FD8;
+    border-radius: 50% !important;
+    box-sizing: border-box;
+    padding: 0 !important;
+    aspect-ratio: 1 / 1;
 }
 
 .contact-icon-wrapper i {
@@ -740,4 +748,23 @@ section:not(#home) h2.display-4 {
 
 .timeline-content i.text-primary {
     color: var(--color-primary) !important;
+}
+
+/* Outer border for profile image with grey background inside */
+.profile-img-outer {
+    background: #B3DCF6; /* updated grey ring color */
+    border: 2px solid var(--color-primary); /* outer border */
+    border-radius: 50%;
+    display: inline-block;
+    padding: 10px; /* thickness of grey area */
+    box-sizing: border-box;
+}
+
+/* Profile image custom style */
+.profile-img {
+    background: #fff;
+    border: 2px solid var(--color-primary); /* inner border */
+    border-radius: 50%;
+    padding: 4px;
+    box-sizing: border-box;
 }

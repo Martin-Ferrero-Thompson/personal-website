@@ -510,11 +510,16 @@ section:not(#home) h2.display-4 {
     align-items: center;
     justify-content: center;
     transition: transform 0.2s ease;
-    background-color: var(--color-tertiary);
+    background-color: #7C3FD8;
+}
+
+.contact-icon-wrapper i {
+    color: var(--color-white);
 }
 
 .contact-icon-wrapper:hover {
     transform: scale(1.1);
+    background-color: var(--color-primary-dark);
 }
 
 #contact .card {
@@ -542,7 +547,11 @@ section:not(#home) h2.display-4 {
 
 /* Dark mode specific styles */
 [data-bs-theme="dark"] #contact .contact-icon-wrapper {
-    background-color: var(--color-tertiary);
+    background-color: var(--color-primary);
+}
+
+[data-bs-theme="dark"] #contact .contact-icon-wrapper i {
+    color: var(--color-white);
 }
 
 [data-bs-theme="dark"] #contact .badge {
@@ -635,4 +644,100 @@ section:not(#home) h2.display-4 {
 .modal-content {
     background-color: var(--color-background);
     border-color: var(--card-border);
+}
+
+/* Icon color overrides for all sections */
+.bi.text-primary {
+    color: var(--color-primary) !important;
+}
+
+/* Journey section icon styles */
+.journey-icon-wrapper {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Bootstrap Primary Color Override */
+.text-primary {
+    color: var(--color-primary) !important;
+}
+
+.bg-primary {
+    background-color: var(--color-primary) !important;
+}
+
+/* Badge styles */
+.badge.bg-primary {
+    background-color: var(--color-primary) !important;
+}
+
+.badge.text-primary {
+    color: var(--color-primary) !important;
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+.btn-outline-primary {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+/* Link primary color */
+.link-primary {
+    color: var(--color-primary) !important;
+}
+
+.link-primary:hover {
+    color: var(--color-primary-dark) !important;
+}
+
+/* Semi-transparent primary backgrounds */
+.bg-primary.bg-opacity-10 {
+    background-color: rgba(124, 63, 216, 0.1) !important;
+}
+
+/* Project filter buttons */
+[data-filter].btn-primary.bg-opacity-10 {
+    background-color: rgba(124, 63, 216, 0.1);
+    color: var(--color-primary);
+    border-color: transparent;
+}
+
+[data-filter].btn-primary.bg-opacity-10:hover {
+    background-color: rgba(124, 63, 216, 0.2);
+    color: var(--color-primary);
+    border-color: transparent;
+}
+
+[data-filter].btn-primary.bg-opacity-10.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Timeline elements */
+.timeline-info .text-primary {
+    color: var(--color-primary) !important;
+}
+
+.timeline-info .badge {
+    background-color: rgba(124, 63, 216, 0.1);
+    color: var(--color-primary);
+}
+
+.timeline-content i.text-primary {
+    color: var(--color-primary) !important;
 }
